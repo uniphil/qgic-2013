@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    {% assets filters='sass', output='css/screen.css', 'sass/screen.sass' %}
+      <link media="screen, projection" rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+    {% assets filters='sass', output='css/print.css', 'sass/print.sass' %}
+      <link media="print" rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+  </head>
+  <body>
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <!--<script src="{{ url_for('static', filename='js/main.js') }}"></print>-->
+    {% assets filters='coffeescript', output='js/main.js', 'coffee/main.coffee' %}
+      <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+  </body>
+</html>
