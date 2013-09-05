@@ -1,19 +1,7 @@
+@import "compass/css3/box-sizing"
 
 @mixin box-sizing($sizing: border-box)
   box-sizing: border-box
-
-@mixin button($buttonbg, $buttoncolor: inherit, $font-adjust: 1.0)
-  display: inline-block
-  @include box-sizing
-  $height: 1.1em
-  vertical-align: baseline
-  font-size: 1em * $font-adjust
-  height: ($height / $font-adjust)
-  padding: (0.05em / $font-adjust) 0.667em (0.05em / $font-adjust)
-  background: $buttonbg
-  color: $buttoncolor
-  text-decoration: none
-  border-radius: ($height / 2 / $font-adjust)
 
 @mixin inliner
   div, header, nav, ul, li, h1, h2, h3, h4, h5, h6
@@ -22,3 +10,22 @@
     display: inline-block
   ul, li
     list-style: none
+
+@mixin button($bg, $color, $size: 1.0em, $pad: 0.05em, $rounding: 0.667)
+  display: inline-block
+  @include box-sizing(border-box)
+  height: ($pad * 2 + 1em)
+  // vertical-align: baseline
+  font-size: $size
+  padding: $pad ($pad * 4) $pad
+  background: $bg
+  color: $color
+  text-decoration: none
+  border-radius: (($pad * 2 + $size) / 2 * $rounding)
+
+@mixin stripe($text-color, $stripe-color)
+  display: inline
+  line-height: 1.618em
+  text-transform: uppercase
+  color: $text-color
+  background: $stripe-color

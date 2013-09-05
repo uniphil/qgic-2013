@@ -2,27 +2,29 @@
 
 {% block content %}
   <div class="header-nav">
-    <header>
-      <h1><a href="#section-top" title="Queen's Global Innovation Conference (top of page)"><span class="acc">Q</span><span class="word">ueen's </span><span class="acc">G</span><span class="word">lobal </span><span class="acc">I</span><span class="word">nnovation </span><span class="acc">C</span><span class="word">onference </span><span class="word">20</span><span class="acc">13</span></a></h1>
-    </header>
-    <nav>
-      <ul>
-        <li>
-          <a href="#section-about">About</a>
-        </li>
-        <li>
-          <a href="#section-delegates">Delegates</a>
-        </li>
-        <li>
-          <a href="#section-sponsors">Sponsors</a>
-        </li>
-        <li>
-          <a href="#section-team">Team</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="nav-register">
-      <a href="#register">Register</a>
+    <div class="header-nav-content">
+      <header>
+        <h1><a href="#section-top" title="Queen's Global Innovation Conference (top of page)"><span class="acc">Q</span><span class="word">ueen's </span><span class="acc">G</span><span class="word">lobal </span><span class="acc">I</span><span class="word">nnovation </span><span class="acc">C</span><span class="word">onference </span><span class="word">20</span><span class="acc">13</span></a></h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#section-about">About</a>
+          </li>
+          <li>
+            <a href="#section-delegates">Delegates</a>
+          </li>
+          <li>
+            <a href="#section-sponsors">Sponsors</a>
+          </li>
+          <li>
+            <a href="#section-team">Team</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-register">
+        <a href="#register">Register</a>
+      </div>
     </div>
   </div>
 
@@ -30,8 +32,13 @@
 
     <section class="section" id="section-top">
       <div class="section-body section-bottom-bar-margin">
-        <h2>The Power to Change Systems</h2>
-        <p>Blah blah blah blah blah</p>
+        <div class="section-top-content">
+          <h2><span>The Power to Change Systems</span></h2>
+          <p>This year Queen’s Global Innovation Conference will challenge delegates to learn about global issues and what it takes to make a difference.</p>
+          <div class="section-top-register-button">
+            <a href="{{ url_for('register') }}">Register</a>
+          </div>
+        </div>
       </div>
       <div class="section-bottom-bar">
         <div class="social">

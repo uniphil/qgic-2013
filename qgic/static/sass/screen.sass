@@ -7,43 +7,79 @@
 
 .header-nav
   position: fixed
+  z-index: 2
   top: 0
   width: 100%
-  background: $accent
-  padding: 1em
-  @include inliner
+  background: $fill
 
-  h1 .word
-    display: inline-block
-    overflow: hidden
+  .header-nav-content
+    max-width: $container
+    margin: 0 auto
 
-  nav li, .nav-register
-    width: 0
-    overflow: hidden
+  $collapse-transition: all 0.4s linear
 
-  a
-    color: $type
-
-  .nav-register
-    @include button($alt-fill)
+  h1
+    padding: 0.333em 0
+    @include transition($collapse-transition)
+    a
+      color: $accent
+    .word
+      display: inline-block
+      padding-right: 0.3em
+      max-width: 5em
+      @include transition($collapse-transition)
+  
+  nav, .nav-register
+    display: none
 
   &.collapsed
-    padding: 0.333em
     h1
       font-size: 1em
       .word
-        width: 0
-    nav li, .nav-register
-      width: auto
-
-// todo: handle no-js case
+        padding-right: 0
+        max-width: 0
+        overflow: hidden
+        font-size: 1em  // for the transition
 
 
 .section
+  position: relative
+  z-index: 1
   padding: 3em 1em 2em
+
+.section-body
+  max-width: $container
+  margin: 0 auto
 
 
 #section-top
-  background: $fill
+  background: $fill url('../img/section-top-bg.jpg') 50%
+  background-size: cover
   color: $alt-fill
+
+  .section-top-content
+    width: 50%
+
+    h2
+      margin: 1em 0
+      font-size: 2.5em
+      font-weight: bold
+      span
+        @include stripe($fill, $alt-fill)
+
+    .section-top-register-button
+      margin: 2em 0
+      // text-align: center
+      a
+        @include button($accent, $fill, 2em, 0.333em, 0.2)
+        font-weight: bold
+        text-transform: uppercase
+        background: fade-out($accent, 0.8)
+        border: 1px solid $accent
+        color: $accent
+        @include transition(all 0.333s)
+
+        &:hover
+          background: fade-out($accent, 0.5)
+          color: $alt-fill
 

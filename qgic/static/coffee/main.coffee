@@ -1,6 +1,6 @@
 
-setTimeout(
-  () ->
+$(window).scroll (e) ->
+  if $(window).scrollTop() > 212
     $('.header-nav').addClass 'collapsed'
-  3000
-)
+  else
+    $('.header-nav').removeClass 'collapsed'

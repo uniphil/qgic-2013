@@ -66,3 +66,8 @@ def home():
         },
     ]
     return render_template('home.html', team_members=team_members)
+
+
+@app.route('/register')
+def register():
+    return 'register here!'
