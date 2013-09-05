@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="header nav">
+  <div class="header-nav">
     <header>
-      <h1><a href="#section-top"><span class="acc">Q</span><span class="word">ueen's </span><span class="acc">G</span><span class="word">lobal </span><span class="acc">I</span><span class="word">nnovation </span><span class="acc">C</span><span class="word">onference </span><span class="word">20</span><span class="acc">13</span></a></h1>
+      <h1><a href="#section-top" title="Queen's Global Innovation Conference (top of page)"><span class="acc">Q</span><span class="word">ueen's </span><span class="acc">G</span><span class="word">lobal </span><span class="acc">I</span><span class="word">nnovation </span><span class="acc">C</span><span class="word">onference </span><span class="word">20</span><span class="acc">13</span></a></h1>
     </header>
     <nav>
       <ul>
@@ -22,7 +22,7 @@
       </ul>
     </nav>
     <div class="nav-register">
-      <a href="#register"></a>
+      <a href="#register">Register</a>
     </div>
   </div>
 
@@ -30,9 +30,12 @@
 
     <section class="section" id="section-top">
       <div class="section-body section-bottom-bar-margin">
+        <h2>The Power to Change Systems</h2>
+        <p>Blah blah blah blah blah</p>
       </div>
       <div class="section-bottom-bar">
         <div class="social">
+          fb twitter
         </div>
         <div class="js hint">
           <p><span class="icon-arrow-down" title="Scroll Down"></span> Scroll Down</p>
@@ -61,6 +64,22 @@
     <section class="section" id="section-team">
       <div class="section-body">
         <h2>The Team</h2>
+
+        <div class="team-members">
+          <ul>
+            {% for member in team_members %}
+              <li class="team-member">
+                <address>
+                  <h4>{{ member.name }}</h4>
+                  <p class="team-role">{{ member.role }}</p>
+                </address>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <h3>Contact Us!</h3>
+        <p>blah blah blah</p>
       </div>
     </section>
 

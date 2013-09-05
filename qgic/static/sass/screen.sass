@@ -1,7 +1,49 @@
-/*
-  Welcome to Compass.
-  In this file you should write your main styles. (or centralize your imports)
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
 @import compass/reset
+@import compass/css3
+
+@import _variables
+@import _mixins
+@import _type
+
+.header-nav
+  position: fixed
+  top: 0
+  width: 100%
+  background: $accent
+  padding: 1em
+  @include inliner
+
+  h1 .word
+    display: inline-block
+    overflow: hidden
+
+  nav li, .nav-register
+    width: 0
+    overflow: hidden
+
+  a
+    color: $type
+
+  .nav-register
+    @include button($alt-fill)
+
+  &.collapsed
+    padding: 0.333em
+    h1
+      font-size: 1em
+      .word
+        width: 0
+    nav li, .nav-register
+      width: auto
+
+// todo: handle no-js case
+
+
+.section
+  padding: 3em 1em 2em
+
+
+#section-top
+  background: $fill
+  color: $alt-fill
+
