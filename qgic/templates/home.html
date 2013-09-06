@@ -4,7 +4,7 @@
   <div class="header-nav">
     <div class="header-nav-content">
       <header>
-        <h1><a href="#section-top" title="Queen's Global Innovation Conference (top of page)"><span class="acc">Q</span><span class="word">ueen's </span><span class="acc">G</span><span class="word">lobal </span><span class="acc">I</span><span class="word">nnovation </span><span class="acc">C</span><span class="word">onference </span><span class="word">20</span><span class="acc">13</span></a></h1>
+        <h1><a href="#section-top" title="Queen's Global Innovation Conference (top of page)"><span class="acc">Q</span><span class="word">ueen's </span><span class="acc">G</span><span class="word">lobal </span><span class="acc">I</span><span class="word">nnovation </span><span class="acc">C</span><span class="word">onference </span><span class="word nospace">20</span><span class="acc">13</span></a></h1>
       </header>
       <nav>
         <ul>
@@ -23,7 +23,7 @@
         </ul>
       </nav>
       <div class="nav-register">
-        <a href="#register">Register</a>
+        <a href="{{ url_for('register') }}">Register</a>
       </div>
     </div>
   </div>
@@ -39,13 +39,14 @@
             <a href="{{ url_for('register') }}">Register</a>
           </div>
         </div>
-      </div>
-      <div class="section-bottom-bar">
-        <div class="social">
-          fb twitter
-        </div>
-        <div class="js hint">
-          <p><span class="icon-arrow-down" title="Scroll Down"></span> Scroll Down</p>
+        <div class="section-bottom-bar">
+          <div class="social">
+            <a href="https://www.facebook.com/QueensGlobalInnovationConference" data-icon="f" title="facebook"> like</a>
+            <a href="https://twitter.com/qgic" data-icon="t" title="twitter"> follow</a>
+          </div>
+          <div class="js hint"><!-- 
+            <p><span class="icon-arrow-down" title="Scroll Down"></span> Scroll Down</p> -->
+          </div>
         </div>
       </div>
     </section>
@@ -53,18 +54,54 @@
     <section class="section" id="section-about">
       <div class="section-body">
         <h2>About QGIC</h2>
+        <p>The Queen’s Global Innovation Conference, or QGIC, inspires delegates to care about the most pressing global issues of our time (think climate change, poverty, and overpopulation), to innovate solutions to these problems, and to integrate them into their communities.  We believe that the challenges we face are increasingly complex and interconnected and require an <strong>interdisciplinary</strong> approach. That’s why we are aiming to be the most interdisciplinary conference on campus. Delegates should leave the conference as smart <strong>systems-changers</strong>, equipped with the necessary tools to create positive change and knowing where they can have the greatest impact</p>
+
+        <h3>The Power to Change systems</h3>
+        <p>We believe that addressing complex global issues will require a different approach than the one we’ve been using.</p>
+        <p>Here’s what we’re doing differently:</p>
+
+        <h4>1. Collaborative Innovation</h4>
+        <blockquote>
+          For every complex problem there is an answer that is clear, simple, and wrong
+          <cite>H. L. Mencken</cite>
+        </blockquote>
+        <p>No one person holds the solution. Solutions will come from the experiences, insights and creativity of a group of individuals working together toward a common goal. Solutions will require coordination across industries, disciplines, and silos.</p>
+
+        <h4>2. Systems Thinking</h4>
+        <blockquote>
+          We can't impose our will on a system. We can listen to what the system tells us, and discover how its properties and our values can work together to bring forth something much better than could ever be produced by our will alone.
+          <cite>Donella H. Meadows</cite>
+        </blockquote>
+        <p>The challenges we face are increasingly complex and interconnected. Complexity is the nature of living systems and the world we live in. Systems thinking teaches us to work within a system’s constraints to achieve desired results and avoid unintended consequences. It stresses the role of interconnections, including the role we play within the system.</p>
+
       </div>
     </section>
 
     <section class="section" id="section-delegates">
       <div class="section-body">
         <h2>Delegates</h2>
+
+        <h3>What's in Store?</h3>
+        <p>This year Queen’s Global Innovation Conference will challenge delegates to learn about global issues and what it takes to make a difference. This will be accomplished through:</p>
+
+        <ul>
+          <li>
+            <p><strong>Speakers:</strong> Speakers will cover topics including poverty, hunger and lack of drinking water, the increasing global population, and climate change.</p>
+          </li>
+          <li>
+            <p><strong>Workshops:</strong> Group activities run by on-campus clubs and professors will allow delegates to discuss global problems in a systems-thinking lens and give delegates the skills to develop innovative solutions.</p>
+          </li>
+          <li>
+            <p><strong>The Innovation Challenge:</strong> The most hands-on part of the conference will take the form of a Dragon’s Den-style Innovation Challenge. Delegates will work in inter-disciplinary teams to design a local solution to a global problem. A panel of experts will evaluate their innovations</p>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="section" id="section-sponsors">
       <div class="section-body">
         <h2>Sponsors</h2>
+        <p><em>our awesome sponsorship package</em></p>
       </div>
     </section>
 
@@ -79,6 +116,14 @@
                 <address>
                   <h4>{{ member.name }}</h4>
                   <p class="team-role">{{ member.role }}</p>
+                  <div class="team-bio">
+                    {% for para in member.bio %}
+                      <p>{{ para }}</p>
+                    {% endfor %}
+                  </div>
+                  <p class="team-address">
+                    <a href="{{ member.contact }}">{{ member.contact }}</a>
+                  </p>
                 </address>
               </li>
             {% endfor %}

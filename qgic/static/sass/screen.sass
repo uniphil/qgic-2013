@@ -4,6 +4,7 @@
 @import _variables
 @import _mixins
 @import _type
+@import _icons
 
 .header-nav
   position: fixed
@@ -11,35 +12,71 @@
   top: 0
   width: 100%
   background: $fill
+  $collapse-transition: 0.4s linear
 
   .header-nav-content
+    @include inliner
     max-width: $container
     margin: 0 auto
-
-  $collapse-transition: all 0.4s linear
+    position: relative
 
   h1
     padding: 0.333em 0
-    @include transition($collapse-transition)
+    @include transition(all $collapse-transition)
     a
       color: $accent
     .word
       display: inline-block
       padding-right: 0.3em
+      &.nospace
+        padding-right: 0
       max-width: 5em
-      @include transition($collapse-transition)
+      @include transition(all $collapse-transition)
   
   nav, .nav-register
-    display: none
+    @include box-sizing(border-box)
+    max-width: 0
+    overflow: hidden
+    @include transition(max-width, $collapse-transition)
+    white-space: nowrap
+
+    li::before
+      content: "/ "
+      color: $alt-fill
+      margin-left: 1em
+
+  .nav-register
+    position: absolute
+    max-width: 100%
+    opacity: 0
+    top: 0.333em
+    right: 0
 
   &.collapsed
+    padding: 0.2em 0 0.5em
     h1
-      font-size: 1em
+      font-size: 1.2em
       .word
         padding-right: 0
         max-width: 0
         overflow: hidden
-        font-size: 1em  // for the transition
+    nav, .nav-register
+      overflow: visible
+      max-width: 100%
+    .nav-register
+      opacity: 1
+      a
+        @include button($accent, $fill, 1em, 0.2em, 0.5)
+        font-weight: bold
+        text-transform: uppercase
+        background: fade-out($fill, 0.5)
+        border: 1px solid $accent
+        color: $accent
+        @include transition(all 0.333s)
+
+        &:hover
+          background: fade-out($accent, 0.5)
+          color: $alt-fill
 
 
 .section
@@ -83,3 +120,5 @@
           background: fade-out($accent, 0.5)
           color: $alt-fill
 
+  .section-bottom-bar .social a
+    margin-right: 2em
