@@ -22,7 +22,7 @@
           </li>
         </ul>
       </nav>
-      <div class="nav-register">
+      <div class="register nav-register">
         <a href="{{ url_for('register') }}">Register</a>
       </div>
     </div>
@@ -34,8 +34,8 @@
       <div class="section-body section-bottom-bar-margin">
         <div class="section-top-content">
           <h2><span>The Power to Change Systems</span></h2>
-          <p>This year Queen’s Global Innovation Conference will challenge delegates to learn about global issues and what it takes to make a difference.</p>
-          <div class="section-top-register-button">
+          <p>This year Queen’s Global Innovation Conference will challenge you to learn about global issues and what it takes to make a difference.</p>
+          <div class="register section-top-register-button">
             <a href="{{ url_for('register') }}">Register</a>
           </div>
         </div>
@@ -74,34 +74,48 @@
         </blockquote>
         <p>The challenges we face are increasingly complex and interconnected. Complexity is the nature of living systems and the world we live in. Systems thinking teaches us to work within a system’s constraints to achieve desired results and avoid unintended consequences. It stresses the role of interconnections, including the role we play within the system.</p>
 
+        <h4>3. Leadership</h4>
+        <blockquote>
+          Some really super fantastic tremendously inspiring awesome dizzyingly successful person's superbly well-articulated brilliant observation packaged into a quote here.
+          <cite>A Genius</cite>
+        </blockquote>
+        <p>Content for leadership stuff blah blah blah</p>
+
       </div>
     </section>
 
     <section class="section" id="section-delegates">
       <div class="section-body">
         <h2>Delegates</h2>
+        <p>This year Queen’s Global Innovation Conference will challenge you to learn about global issues and what it takes to make a difference.</p>
 
-        <h3>What's in Store?</h3>
-        <p>This year Queen’s Global Innovation Conference will challenge delegates to learn about global issues and what it takes to make a difference. This will be accomplished through:</p>
+        <h3>What's in Store For You?</h3>
 
         <ul>
           <li>
-            <p><strong>Speakers:</strong> Speakers will cover topics including poverty, hunger and lack of drinking water, the increasing global population, and climate change.</p>
+            <p><strong>Speakers:</strong> Speakers will cover topics including poverty, hunger and lack of drinking water, the increasing global population, and climate change. <em>Speakers list coming soon!</em></p>
           </li>
           <li>
-            <p><strong>Workshops:</strong> Group activities run by on-campus clubs and professors will allow delegates to discuss global problems in a systems-thinking lens and give delegates the skills to develop innovative solutions.</p>
+            <p><strong>Workshops:</strong> Group activities run by on-campus clubs and professors will allow you to discuss global problems in a systems-thinking lens and give you the skills to develop innovative solutions.</p>
           </li>
           <li>
-            <p><strong>The Innovation Challenge:</strong> The most hands-on part of the conference will take the form of a Dragon’s Den-style Innovation Challenge. Delegates will work in inter-disciplinary teams to design a local solution to a global problem. A panel of experts will evaluate their innovations</p>
+            <p><strong>The Innovation Challenge:</strong> The most hands-on part of the conference will take the form of a Dragon’s Den-style Innovation Challenge. You will work in inter-disciplinary teams to design a local solution to a global problem. A panel of experts will evaluate their innovations</p>
           </li>
         </ul>
+
+        <div class="register delegates-register">
+          <a href="{{ url_for('register') }}">Register</a>
+        </div>
       </div>
     </section>
 
     <section class="section" id="section-sponsors">
       <div class="section-body">
         <h2>Sponsors</h2>
-        <p><em>our awesome sponsorship package</em></p>
+        <p>blah blah blah</p>
+        <p><em>our awesome sponsorship package will go here</em></p>
+        <p>Seriously, this is a great opportunity for your company!!</p>
+        <p>blah blah blah</p>
       </div>
     </section>
 
@@ -111,10 +125,11 @@
 
         <div class="team-members">
           <ul>
-            {% for member in team_members %}
-              <li class="team-member">
+            {% for member in team_members %}<li
+              class="team-member">
                 <address>
-                  <h4>{{ member.name }}</h4>
+                  <h4 class="team-name">{{ member.name }}</h4>
+                  <img class="team-pic" src="{{ member.mug }}" alt="Photo of {{ member.name }}" title="{{ member.name }}: {{ member.role }}" />
                   <p class="team-role">{{ member.role }}</p>
                   <div class="team-bio">
                     {% for para in member.bio %}
@@ -125,8 +140,8 @@
                     <a href="{{ member.contact }}">{{ member.contact }}</a>
                   </p>
                 </address>
-              </li>
-            {% endfor %}
+              </li>{%
+            endfor %}
           </ul>
         </div>
 

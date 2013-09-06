@@ -21,6 +21,20 @@
   text-decoration: none
   border-radius: (($pad * 2 + $size) / 2 * $rounding)
 
+@mixin register-button($bg, $size, $pad: 0.05em, $rounding: 0.667)
+  opacity: 1
+  a
+    @include button($bg, $fill, $size, $pad, $rounding)
+    font-weight: bold
+    text-transform: uppercase
+    background: fade-out($bg, 0.667)
+    border: 1px solid $accent
+    color: $accent
+    @include transition(all 0.333s)
+    &:hover
+      background: fade-out($accent, 0.5)
+      color: $alt-fill
+
 @mixin stripe($text-color, $stripe-color)
   display: inline
   line-height: 1.618em

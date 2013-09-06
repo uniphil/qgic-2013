@@ -9,6 +9,15 @@ h1
   font-size: 2em
 h2
   font-size: 1.5em
+  margin: 0.5em 0
+  font-weight: bold
+h3
+  font-size: 1.3em
+  margin: 2em 0 0.5em
+  text-transform: uppercase
+h4
+  font-size: 1em
+  margin: 1.5em 0 0.667em
   font-weight: bold
 
 a
@@ -18,4 +27,30 @@ a
     text-decoration: underline
 
 p
+  margin: 0.667em 0
   line-height: 1.4em
+
+strong
+  font-weight: bold
+em
+  font-style: italic
+  color: $accent
+
+blockquote
+  max-width: 32em
+  margin-left: 2em
+  // border-left: 0.333em solid fade-out($accent, 0.75)
+  font-style: italic
+  padding: 1em
+  line-height: 1.2em
+  color: $accent
+
+  cite
+    display: block
+    font-size: 0.8em
+    margin: 1em 0 0
+    text-align: right
+    font-style: normal
+    &:before
+      content: "—"
+

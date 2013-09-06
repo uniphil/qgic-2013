@@ -64,19 +64,7 @@
       overflow: visible
       max-width: 100%
     .nav-register
-      opacity: 1
-      a
-        @include button($accent, $fill, 1em, 0.2em, 0.5)
-        font-weight: bold
-        text-transform: uppercase
-        background: fade-out($fill, 0.5)
-        border: 1px solid $accent
-        color: $accent
-        @include transition(all 0.333s)
-
-        &:hover
-          background: fade-out($accent, 0.5)
-          color: $alt-fill
+      @include register-button($fill, 1em, 0.2em, 0.5)
 
 
 .section
@@ -105,20 +93,56 @@
         @include stripe($fill, $alt-fill)
 
     .section-top-register-button
+      @include register-button($accent, 2em, 0.333em, 0.2)
       margin: 2em 0
-      // text-align: center
-      a
-        @include button($accent, $fill, 2em, 0.333em, 0.2)
-        font-weight: bold
-        text-transform: uppercase
-        background: fade-out($accent, 0.8)
-        border: 1px solid $accent
-        color: $accent
-        @include transition(all 0.333s)
-
-        &:hover
-          background: fade-out($accent, 0.5)
-          color: $alt-fill
 
   .section-bottom-bar .social a
     margin-right: 2em
+
+
+#section-about
+  background: #eee
+
+
+#section-delegates
+  .delegates-register
+    @include register-button($fill, 1.5em, 0.333em, 0.2)
+    margin: 2em 0
+
+
+#section-sponsors
+  background: $accent
+  color: #fff
+  em
+    color: $fill
+
+
+#section-team
+  background: $fill
+  color: $alt-fill
+  .team-members li
+    display: inline-block
+    vertical-align: top
+    width: 12em
+    position: relative
+    height: 12em
+    line-height: 12em
+    address
+      line-height: 1em
+    .team-name, .team-role
+      margin: 0
+      position: absolute
+    .team-name
+      top: 0.5em
+      left: 0.5em
+    .team-bio
+      display: none
+    .team-pic
+      width: 100%
+    .team-role
+      bottom: 0.5em
+      width: 100%
+      text-align: center
+    .team-address
+      display: none
+
