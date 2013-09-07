@@ -18,5 +18,10 @@ def runserver():
     from os import environ as env
     app.run(debug=True, host='0.0.0.0', port=int(env.get('PORT', '5000')))
 
+@manager.command
+def runnodebug():
+    from os import environ as env
+    app.run(host='0.0.0.0', port=int(env.get('PORT', '5000')))
+
 if __name__ == '__main__':
     manager.run()
