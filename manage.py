@@ -8,8 +8,9 @@
 """
 
 from flask.ext.script import Manager
+from flask.ext.assets import ManageAssets
 
-from qgic import app, assets
+from qgic import app
 
 manager = Manager(app)
 
