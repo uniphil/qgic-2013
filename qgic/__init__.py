@@ -15,6 +15,7 @@ app = Flask(__name__)
 assets = Environment(app)
 
 assets.url = '/static'  # HACK HACK HACK
+assets.debug = app.debug
 
 assets.register('css_screen', Bundle('sass/screen.sass',
                 filters='compass', output='css/screen.%(version)s.css'))
