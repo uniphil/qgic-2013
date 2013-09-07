@@ -1,1 +1,1 @@
-web: python manage.py runserver
+web: gunicorn qgic:app -b 0.0.0.0:$PORT
