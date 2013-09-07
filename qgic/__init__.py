@@ -15,15 +15,16 @@ app = Flask(__name__)
 assets = Environment(app)
 
 assets.url = '/static'  # HACK HACK HACK
+assets.auto_build = False
 assets.debug = False
 
-assets.register('css_screen', Bundle('sass/screen.sass',
-                filters='compass', output='css/screen.%(version)s.css'))
-assets.register('css_print', Bundle('sass/print.sass',
-                filters='compass', output='css/print.%(version)s.css'))
+assets.register('css_screen', 'sass/screen.sass',
+                filters='compass', output='css/screen.%(version)s.css')
+assets.register('css_print', 'sass/print.sass',
+                filters='compass', output='css/print.%(version)s.css')
 
-assets.register('js', Bundle('coffee/main.coffee',
-                filters='coffeescript', output='js/main.%(version)s.js'))
+assets.register('js', 'coffee/main.coffee',
+                filters='coffeescript', output='js/main.%(version)s.js')
 
 
 @app.route('/')
