@@ -15,9 +15,9 @@ app = Flask(__name__)
 assets = Environment(app)
 
 assets.url = '/static'  # HACK HACK HACK
-assets.auto_build = False
-assets.debug = False
-assets.manifest = "file:assets-manifest"
+#assets.auto_build = False
+#assets.debug = False
+#assets.manifest = "file:assets-manifest"
 
 assets.register('css_screen', 'sass/screen.sass',
                 filters='compass', output='css/screen.%(version)s.css')

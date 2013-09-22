@@ -115,6 +115,29 @@
   color: #fff
   em
     color: $fill
+  a
+    color: $fill
+    border-color: $fill
+    &:hover
+      background: rgba(255, 255, 255, 0.2)
+  .feature
+    margin: 1em auto
+    a
+      border-width: 0
+    img
+      padding: 0.2em
+      background: rgba(255, 255, 255, 0.2)
+      margin: 1em
+      vertical-align: middle
+      border-width: 0
+    .linked
+      font-weight: bold
+      border-bottom: 1px dashed $fill
+      margin-right: 1em
+    @media (max-width: 480px)
+      img,
+      span
+        display: block
 
 
 #section-team
