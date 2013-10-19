@@ -101,7 +101,55 @@
 
 
 #section-about
-  background: #eee
+  background: #ddd
+  border-bottom: 1px dashed #fff
+
+  blockquote
+    color: $link
+    cite
+      color: $link
+
+  .doing
+    position: relative
+    padding: 0 1rem 1rem
+    border-left: 4rem solid $link
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      z-index: 1
+      top: 0
+      left: -4rem
+      bottom: 0
+      width: 4rem
+      background-size: cover
+
+    &.collabs
+      &:before
+        background: url('../img/hands.png') 50% 30%
+        background-size: cover
+    &.systems
+      border-color: $accent
+      &:before
+        background: url('../img/pcb.png') 50% 30%
+      blockquote
+        color: $accent
+        cite
+          color: $accent
+    &.leaders
+      &:before
+        background: url('../img/crowd-overhead.png') 80%
+
+  h4.big
+    position: relative
+    z-index: 2
+    margin: 0 0 0 -4rem
+    line-height: 1em
+    font: bold 4em "Roboto Condensed"
+    text-transform: uppercase
+    letter-spacing: -5px
+    color: #fff
+    text-shadow: 0 0 2px #333
 
 
 #section-delegates
@@ -168,4 +216,5 @@
       text-align: center
     .team-address
       display: none
+
 

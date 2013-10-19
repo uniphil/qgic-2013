@@ -108,7 +108,7 @@ def home():
         {
             'name': 'Phil Schleihauf',
             'mug': url_for('static', filename='img/facepalm.svg'),
-            'role': 'IT Director',
+            'role': 'Website',
             'bio': [''],
             'contact': '',
         },
