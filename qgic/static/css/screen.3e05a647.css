@@ -1,0 +1,679 @@
+@charset "UTF-8";
+/* line 17, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../home/phil/.gem/ruby/2.0.0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+}
+
+/* line 6, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+h1, h2, h3, h4, h5, h6, th {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 8, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+h1 {
+  font-size: 2em;
+}
+
+/* line 10, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+h2 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+}
+
+/* line 13, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+h3 {
+  font-size: 1.3em;
+  margin: 2em 0 0.5em;
+  text-transform: uppercase;
+}
+
+/* line 17, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+h4 {
+  font-size: 1em;
+  margin: 1.5em 0 0.667em;
+  font-weight: bold;
+}
+
+/* line 22, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+a {
+  color: #3399cc;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px dashed #3399cc;
+}
+
+/* line 30, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+p {
+  margin: 0.667em 0;
+  line-height: 1.4em;
+}
+
+/* line 34, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+strong {
+  font-weight: bold;
+}
+
+/* line 36, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+em {
+  font-style: italic;
+  color: #6ea13e;
+}
+
+/* line 40, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+blockquote {
+  max-width: 32em;
+  margin-left: 2em;
+  font-style: italic;
+  padding: 1em;
+  line-height: 1.2em;
+  color: #6ea13e;
+}
+/* line 49, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+blockquote cite {
+  display: block;
+  font-size: 0.8em;
+  margin: 1em 0 0;
+  text-align: right;
+  font-style: normal;
+}
+/* line 55, ../../home/phil/Code/qgic-2013/qgic/static/sass/_type.sass */
+blockquote cite:before {
+  content: "—";
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 8, ../../home/phil/Code/qgic-2013/qgic/static/sass/_icons.sass */
+[data-icon]:before {
+  font-family: "icomoon";
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 10, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+/* line 18, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav .header-nav-content {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 7, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+.header-nav .header-nav-content div, .header-nav .header-nav-content header, .header-nav .header-nav-content nav, .header-nav .header-nav-content ul, .header-nav .header-nav-content li, .header-nav .header-nav-content h1, .header-nav .header-nav-content h2, .header-nav .header-nav-content h3, .header-nav .header-nav-content h4, .header-nav .header-nav-content h5, .header-nav .header-nav-content h6 {
+  display: inline-block;
+}
+/* line 9, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+.header-nav .header-nav-content ul, .header-nav .header-nav-content li {
+  list-style: none;
+}
+/* line 24, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav h1 {
+  padding: 0.333em 0;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+/* line 27, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav h1 a {
+  color: #6ea13e;
+}
+/* line 29, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav h1 .word {
+  display: inline-block;
+  padding-right: 0.3em;
+  max-width: 5em;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+/* line 32, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav h1 .word.nospace {
+  padding-right: 0;
+}
+/* line 37, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav nav, .header-nav .nav-register {
+  box-sizing: border-box;
+  max-width: 0;
+  overflow: hidden;
+  -webkit-transition: max-width, 0.4s linear;
+  -moz-transition: max-width, 0.4s linear;
+  -o-transition: max-width, 0.4s linear;
+  transition: max-width, 0.4s linear;
+  white-space: nowrap;
+}
+/* line 44, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav nav li::before, .header-nav .nav-register li::before {
+  content: "/ ";
+  color: rgba(255, 255, 255, 0.667);
+  margin-left: 1em;
+}
+/* line 49, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav .nav-register {
+  position: absolute;
+  max-width: 100%;
+  opacity: 0;
+  top: 0.333em;
+  right: 0;
+}
+/* line 56, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav.collapsed {
+  padding: 0.2em 0 0.5em;
+}
+/* line 58, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav.collapsed h1 {
+  font-size: 1.2em;
+}
+/* line 60, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav.collapsed h1 .word {
+  padding-right: 0;
+  max-width: 0;
+  overflow: hidden;
+}
+/* line 64, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav.collapsed nav, .header-nav.collapsed .nav-register {
+  overflow: visible;
+  max-width: 100%;
+}
+/* line 67, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.header-nav.collapsed .nav-register {
+  opacity: 1;
+}
+/* line 26, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+.header-nav.collapsed .nav-register a {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 1.4em;
+  font-size: 1em;
+  padding: 0.2em 0.8em 0.2em;
+  background: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  border-radius: 0.35em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", "Open Sans", sans-serif;
+  background: rgba(0, 0, 0, 0.083);
+  border: 1px solid #6ea13e;
+  color: #6ea13e;
+  -webkit-transition: all 0.333s;
+  -moz-transition: all 0.333s;
+  -o-transition: all 0.333s;
+  transition: all 0.333s;
+}
+/* line 35, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+.header-nav.collapsed .nav-register a:hover {
+  background: rgba(110, 161, 62, 0.5);
+  color: rgba(255, 255, 255, 0.667);
+}
+
+/* line 71, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 3em 1em 2em;
+}
+
+/* line 76, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.section-body {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* line 81, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-top {
+  background: rgba(0, 0, 0, 0.75) url("../img/section-top-bg.jpg") 50%;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.667);
+}
+/* line 86, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-top .section-top-content {
+  width: 50%;
+}
+/* line 89, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-top .section-top-content h2 {
+  font-family: "Roboto Condensed", "Open Sans", sans-serif;
+  margin: 1em 0;
+  font-size: 3em;
+  font-weight: bold;
+}
+/* line 94, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-top .section-top-content h2 span {
+  display: inline;
+  line-height: 1.618em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.667);
+}
+/* line 97, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-top .section-top-content .section-top-register-button {
+  opacity: 1;
+  margin: 2em 0;
+}
+/* line 26, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+#section-top .section-top-content .section-top-register-button a {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 1.666em;
+  font-size: 2em;
+  padding: 0.333em 1.332em 0.333em;
+  background: #6ea13e;
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  border-radius: 0.2666em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", "Open Sans", sans-serif;
+  background: rgba(110, 161, 62, 0.333);
+  border: 1px solid #6ea13e;
+  color: #6ea13e;
+  -webkit-transition: all 0.333s;
+  -moz-transition: all 0.333s;
+  -o-transition: all 0.333s;
+  transition: all 0.333s;
+}
+/* line 35, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+#section-top .section-top-content .section-top-register-button a:hover {
+  background: rgba(110, 161, 62, 0.5);
+  color: rgba(255, 255, 255, 0.667);
+}
+/* line 101, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-top .section-bottom-bar .social a {
+  margin-right: 2em;
+}
+
+/* line 105, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about {
+  background: #dddddd;
+  border-bottom: 1px dashed white;
+}
+/* line 109, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about blockquote {
+  color: #3399cc;
+}
+/* line 111, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about blockquote cite {
+  color: #3399cc;
+}
+/* line 114, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing {
+  position: relative;
+  padding: 0 1rem 1rem;
+  border-left: 4rem solid #3399cc;
+}
+/* line 118, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -4rem;
+  bottom: 0;
+  width: 4rem;
+  background-size: cover;
+}
+/* line 130, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing.collabs:before {
+  background: url("../img/hands.png") 50% 30%;
+  background-size: cover;
+}
+/* line 133, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing.systems {
+  border-color: #6ea13e;
+}
+/* line 135, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing.systems:before {
+  background: url("../img/pcb.png") 50% 30%;
+}
+/* line 137, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing.systems blockquote {
+  color: #6ea13e;
+}
+/* line 139, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing.systems blockquote cite {
+  color: #6ea13e;
+}
+/* line 142, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about .doing.leaders:before {
+  background: url("../img/crowd-overhead.png") 80%;
+}
+/* line 145, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-about h4.big {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 0 -4rem;
+  line-height: 1em;
+  font: bold 4em "Roboto Condensed", "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  color: white;
+  text-shadow: 0 0 2px #333333;
+}
+
+/* line 158, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .delegates-register {
+  opacity: 1;
+  margin: 4em 0 2em;
+  text-align: center;
+}
+/* line 26, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+#section-delegates .delegates-register a {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 1.666em;
+  font-size: 1.5em;
+  padding: 0.333em 1.332em 0.333em;
+  background: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  border-radius: 0.2166em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", "Open Sans", sans-serif;
+  background: rgba(0, 0, 0, 0.083);
+  border: 1px solid #6ea13e;
+  color: #6ea13e;
+  -webkit-transition: all 0.333s;
+  -moz-transition: all 0.333s;
+  -o-transition: all 0.333s;
+  transition: all 0.333s;
+}
+/* line 35, ../../home/phil/Code/qgic-2013/qgic/static/sass/_mixins.sass */
+#section-delegates .delegates-register a:hover {
+  background: rgba(110, 161, 62, 0.5);
+  color: rgba(255, 255, 255, 0.667);
+}
+/* line 163, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .text {
+  box-sizing: border-box;
+  float: left;
+  width: 33%;
+  padding-right: 1em;
+}
+/* line 168, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people {
+  float: left;
+  width: 66%;
+  margin: -2em 0 2em;
+}
+/* line 172, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker {
+  display: block;
+  height: 64px;
+  color: white;
+  border-bottom: none;
+  position: relative;
+  transition: background-color 0.15s linear;
+}
+/* line 178, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker h4 {
+  margin-top: 0.2em;
+  padding-top: 0.5em;
+  transition: padding 0.2s ease;
+}
+/* line 182, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker h4,
+#section-delegates .people .speaker p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* line 187, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker:after {
+  content: "";
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transition: opacity 0.15s linear;
+}
+/* line 197, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker:hover h4 {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+/* line 200, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker:hover:after {
+  opacity: 1;
+}
+/* line 203, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.dwyer {
+  text-align: right;
+  background-color: #87bd55;
+}
+/* line 206, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.dwyer:hover {
+  background-color: #6ea13e;
+}
+/* line 208, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.dwyer:after {
+  background: url("../img/speakers.jpg") top left no-repeat;
+}
+/* line 211, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.alajek {
+  background-color: #5cadd6;
+}
+/* line 213, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.alajek:hover {
+  background-color: #3399cc;
+}
+/* line 215, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.alajek p {
+  text-align: right;
+}
+/* line 217, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.alajek:after {
+  background: url("../img/speakers.jpg") 50% no-repeat;
+}
+/* line 220, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.slomp {
+  background: #87bd55;
+}
+/* line 222, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.slomp:hover {
+  background-color: #6ea13e;
+}
+/* line 224, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-delegates .people .speaker.slomp:after {
+  background: url("../img/speakers.jpg") bottom right no-repeat;
+}
+
+/* line 229, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors {
+  background: #6ea13e;
+  color: white;
+}
+/* line 232, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors em {
+  color: rgba(0, 0, 0, 0.75);
+}
+/* line 234, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors a {
+  color: rgba(0, 0, 0, 0.75);
+  border-color: rgba(0, 0, 0, 0.75);
+}
+/* line 237, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+/* line 239, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors .feature {
+  margin: 1em auto;
+}
+/* line 241, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors .feature a {
+  border-width: 0;
+}
+/* line 243, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors .feature img {
+  padding: 0.2em;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 1em;
+  vertical-align: middle;
+  border-width: 0;
+}
+/* line 249, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-sponsors .feature .linked {
+  font-weight: bold;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.75);
+  margin-right: 1em;
+}
+@media (max-width: 480px) {
+  /* line 254, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+  #section-sponsors .feature img,
+  #section-sponsors .feature span {
+    display: block;
+  }
+}
+
+/* line 259, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team {
+  background: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.667);
+}
+/* line 262, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li {
+  display: inline-block;
+  vertical-align: top;
+  width: 12em;
+  position: relative;
+  height: 12em;
+  line-height: 12em;
+  overflow: hidden;
+}
+/* line 270, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li address {
+  line-height: 1em;
+}
+/* line 272, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li .team-name, #section-team .team-members li .team-role {
+  margin: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.667);
+}
+/* line 276, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li .team-name {
+  top: -2em;
+  left: 0;
+  padding: 0.25em;
+  transition: top 0.2s ease-out;
+}
+/* line 281, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li .team-bio {
+  display: none;
+}
+/* line 283, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li .team-pic {
+  width: 100%;
+}
+/* line 285, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li .team-role {
+  bottom: -3em;
+  width: 100%;
+  text-align: center;
+  transition: bottom 0.2s ease-out;
+}
+/* line 290, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li .team-address {
+  display: none;
+}
+/* line 293, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li:hover .team-name {
+  top: 0;
+}
+/* line 295, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+#section-team .team-members li:hover .team-role {
+  bottom: 0;
+}
+
+/* line 302, ../../home/phil/Code/qgic-2013/qgic/static/sass/screen.sass */
+.clearfix {
+  clear: both;
+}

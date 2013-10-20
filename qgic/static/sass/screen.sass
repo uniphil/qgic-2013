@@ -157,7 +157,8 @@
 #section-delegates
   .delegates-register
     @include register-button($fill, 1.5em, 0.333em, 0.2)
-    margin: 2em 0
+    margin: 4em 0 2em
+    text-align: center
 
   .text
     +box-sizing
@@ -177,6 +178,7 @@
       h4
         margin-top: 0.2em
         padding-top: 0.5em
+        transition: padding 0.2s ease
       h4,
       p
         padding-left: 1em
@@ -191,8 +193,12 @@
         bottom: 0
         position: absolute
         transition: opacity 0.15s linear
-      &:hover:after
-        opacity: 1
+      &:hover
+        h4
+          padding-left: 1.5em
+          padding-right: 1.5em
+        &:after
+          opacity: 1
 
       &.dwyer
         text-align: right
