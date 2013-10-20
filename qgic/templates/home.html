@@ -23,7 +23,7 @@
         </ul>
       </nav>
       <div class="register nav-register">
-        <a href="{{ url_for('register') }}">Register</a>
+        <a href="http://www.eventbrite.ca/event/8886827741">Register</a>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@
           <h2><span>The Power to Change Systems</span></h2>
           <p>This year Queen’s Global Innovation Conference will challenge you to learn about global issues and what it takes to make a difference.</p>
           <div class="register section-top-register-button">
-            <a href="{{ url_for('register') }}">Register</a>
+            <a href="http://www.eventbrite.ca/event/8886827741">Register</a>
           </div>
         </div>
         <div class="section-bottom-bar">
@@ -97,7 +97,22 @@
         <p>This year Queen’s Global Innovation Conference will challenge you to learn about global issues and what it takes to make a difference.</p>
 
         <h3>Speakers</h3>
-        <p>Speakers will cover topics including poverty, hunger and lack of drinking water, the increasing global population, and climate change.</p>
+        <p class="speakers text">Speakers will cover topics including poverty, hunger and lack of drinking water, the increasing global population, and climate change.</p>
+        <div class="speakers people">
+          <a href="#delegates" class="speaker dwyer">
+            <h4>Jon Dwyer</h4>
+            <p>CEO of Flax Energy</p>
+          </a>
+          <a href="#delegates" class="speaker alajek">
+            <h4>Paul Slomp</h4>
+            <p>Grazing Days</p>
+          </a>
+          <a href="#delegates" class="speaker slomp">
+            <h4>Sal Alajek</h4>
+            <p>Engineers Without Borders Canada</p>
+          </a>
+          <div class="clearfix"></div>
+        </div>
 
         <h3>Workshops</h3>
         <p>You will choose between various workshops, focused on environmental issues, poverty, innovation, and personal development. Run by Queen's clubs (QPID, EWB, WEAO, and more), and Queen’s staff and faculty (Stephen Moore, Mark Hostetler, Colin Robinson), these workshops will apply systems thinking to problem solving.</p>
@@ -106,7 +121,7 @@
         <p>The most hands-on part of the conference will take the form of a Dragon’s Den-style Innovation Challenge. You will work in an inter-disciplinary teams to design a solution to a problem facing the Kingston area. A panel of judges will decide which group receives <strong>$1000 to put their plan into action</strong>. Funding for the challenge is provided by Queen's Innovation Connector. The winning team is also eligible to present to the City of Kingston climate change panel.</p>
 
         <div class="register delegates-register">
-          <a href="{{ url_for('register') }}">Register Now</a>
+          <a href="http://www.eventbrite.ca/event/8886827741">Register Now</a>
         </div>
       </div>
     </section>
@@ -129,8 +144,8 @@
 
         <div class="team-members">
           <ul>
-            {% for member in team_members %}<li
-              class="team-member">
+            {% for member in team_members %}{% set lf=member.name.split()[0]|lower %}<li
+              class="team-member-{{ lf }}">
                 <address>
                   <h4 class="team-name">{{ member.name }}</h4>
                   <img class="team-pic" src="{{ member.mug }}" alt="Photo of {{ member.name }}" title="{{ member.name }}: {{ member.role }}" />
