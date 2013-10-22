@@ -52,7 +52,7 @@ def home():
         },
         {
             'name': 'Yaseen Khaled',
-            'mug': url_for('static', filename='img/facepalm.svg'),
+            'mug': url_for('static', filename='img/team/yaseen.jpg'),
             'role': 'Speaker Coordinator',
             'bio': [''],
             'contact': '',
@@ -76,13 +76,6 @@ def home():
             'contact': 'qgicworkshops@gmail.com',
         },
         {
-            'name': 'Sarah Luke',
-            'mug': url_for('static', filename='img/facepalm.svg'),
-            'role': 'Sponsorship & Finance',
-            'bio': [''],
-            'contact': '',
-        },
-        {
             'name': 'Andrea D\'Amour',
             'mug': url_for('static', filename='img/team/andrea.jpg'),
             'role': 'Sponsorship & Finance',
@@ -99,19 +92,19 @@ def home():
             'contact': '',
         },
         {
-            'name': 'Eric Vanular',
+            'name': 'Monika Szpytko',
             'mug': url_for('static', filename='img/facepalm.svg'),
             'role': 'Logistics Director',
             'bio': [''],
             'contact': '',
         },
-        {
-            'name': 'Phil Schleihauf',
-            'mug': url_for('static', filename='img/facepalm.svg'),
-            'role': 'Website',
-            'bio': [''],
-            'contact': '',
-        },
+        # {
+        #     'name': 'Phil Schleihauf',
+        #     'mug': url_for('static', filename='img/facepalm.svg'),
+        #     'role': 'Website',
+        #     'bio': [''],
+        #     'contact': '',
+        # },
     ]
     return render_template('home.html', team_members=team_members)
 
