@@ -93,7 +93,7 @@ def home():
         },
         {
             'name': 'Monika Szpytko',
-            'mug': url_for('static', filename='img/facepalm.svg'),
+            'mug': url_for('static', filename='img/team/monika.jpg'),
             'role': 'Logistics Director',
             'bio': [''],
             'contact': '',
