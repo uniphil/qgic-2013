@@ -96,29 +96,9 @@
         <h2>Delegates &mdash; What's in Store?</h2>
         <p>This year Queen’s Global Innovation Conference will challenge you to learn about global issues and what it takes to make a difference.</p>
 
-        <h3>Speakers</h3>
-        <p class="speakers text">Speakers will cover topics including poverty, hunger and lack of drinking water, the increasing global population, and climate change.</p>
-        <div class="speakers people">
-          <a href="#delegates" class="speaker dwyer">
-            <h4>Jon Dwyer</h4>
-            <p>CEO of Flax Energy</p>
-          </a>
-          <a href="#delegates" class="speaker alajek">
-            <h4>Paul Slomp</h4>
-            <p>Grazing Days</p>
-          </a>
-          <a href="#delegates" class="speaker slomp">
-            <h4>Sal Alajek</h4>
-            <p>Engineers Without Borders Canada</p>
-          </a>
-          <div class="clearfix"></div>
-        </div>
-
-        <h3>Workshops</h3>
-        <p>You will choose between various workshops, focused on environmental issues, poverty, innovation, and personal development. Run by Queen's clubs (QPID, EWB, WEAO, and more), and Queen’s staff and faculty (Stephen Moore, Mark Hostetler, Colin Robinson), these workshops will apply systems thinking to problem solving.</p>
-
-        <h3>The Innovation Challenge</h3>
-        <p>The most hands-on part of the conference will take the form of a Dragon’s Den-style Innovation Challenge. You will work in an interdisciplinary teams to design a solution to a problem facing the Kingston area. A panel of judges will decide which group receives <strong>$1000 to put their plan into action</strong>. Funding for the challenge is provided by Queen's Innovation Connector. The winning team is also eligible to present to the City of Kingston climate change panel.</p>
+        <a href="{{ url_for('static', filename='img/mindmap.png') }}">
+          <img src="{{ url_for('static', filename='img/mindmap-small.png') }}" width="768" alt="Graphic showing the three featured aspects of the Queen's Global Innovation Conference: Speakers, Workshops, and The Innovation Challenge" title="Click for larger view" />
+        </a>
 
         <div class="register delegates-register">
           <a href="http://www.eventbrite.ca/event/8886827741">Register Now</a>
@@ -131,7 +111,7 @@
         <h2>Sponsors</h2>
         <p>Queen’s Global Innovation Conference provides a number of opportunities to establish your brand among students, build your reputation, and strengthen your partnership with the Queen’s Engineering Society. Check out our Sponsorship Package for more information.</p>
         <div class="feature">
-          <a href="{{ url_for('static', filename='docs/qgic-sponsorship-package-2013.doc') }}"><img src="{{ url_for('static', filename='img/sponsor-package-thumb.png') }}" alt="Sponsorship Package" />
+          <a href="{{ url_for('static', filename='docs/qgic-sponsorship-package-2013.pdf') }}"><img src="{{ url_for('static', filename='img/sponsor-package-thumb.png') }}" alt="Sponsorship Package" />
           <span class="linked">Download the 2013 Sponsorship Pacakge</span></a>
         </div>
         <p>Please do not hesitate to contact us at <a href="mailto:qgicfinance@gmail.com">qgicfinance@gmail.com</a> for more information. We hope that we can work together to create positive change in our community and the world at large.</p>
